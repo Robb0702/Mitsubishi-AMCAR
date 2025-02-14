@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'mitsu';
+    src: url(./Assets/font/BITSUMIS.TTF);
+}
+*{
+    margin: 0;
+}
+.navbar {
+    letter-spacing: .1875rem;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-weight: 750;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #FCFCFC;
+    height: 90px;
+}
+
+.navbar img {
+    width: 100px;
+    padding: 15px;
+}
+
+.menu {
+    display: flex;
+    color: 232931;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu ul:hover {
+    color: #CF4647;
+}
+
+.icon {
+    margin-left: .1875rem;
+    font-size: 25px;
+}
+
+
+/* Adjust the slider container to fit below the navbar */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 90.1vh;
+}
+
+.slider-image {
+    width: 193vh;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    filter: brightness(0.2);
+}
+
+.text, .text2, .text3 {
+    top: 34%;
+    left: 10%;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    position: absolute;
+    z-index: 1;
+    color: white;
+}
+
+.text p, .text2 p, .text3 p {
+    font-family: 'mitsu';
+    letter-spacing: .1875rem;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.text h1, .text2 h1, .text3 h1 {
+
+    font-weight: 400;
+    font-family: 'mitsu';
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.text h3, .text2 h3, .text3 h3 {
+    line-height: 2.25rem;
+    font-weight: 100;
+}
+/* New Image Section (Centering and no scrollbar) */
+.new-image-section {
+    margin-top: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 650px; /* Adjust to the height you want */
+    padding: 50px;
+}
+
+
+/* First Row (Landscape Format) */
+.first-row {
+    display: flex;
+    justify-content: space-between; /* Space out images */
+    width: 100%; /* Ensure full width */
+    margin-bottom: 20px;
+    
+}
+
+/* Second Row (Landscape Format) */
+.second-row {
+    display: flex;
+    justify-content: space-between; /* Space out images */
+    width: 100%; /* Ensure full width */
+
+}
+
+/* Style for each image */
+.first-row img, .second-row img {
+    width: 24%; /* Ensure each image takes up 1/4th of the row */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Make sure the image covers the container */
+    border-radius: 10px; /* Optional, for rounded corners */
+}
+
+/* Optional: If you need a specific height for the landscape effect */
+.first-row, .second-row {
+    height: 225px; /* Adjust height for better landscape look */
+}
+
+
+.slide-button, 
+.slide-button2, 
+.slide-button3 {
+    position: relative;
+    border: 2px solid white;
+    width: 250px;
+    height: 50px;
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: .1875rem;
+    overflow: hidden;
+}
+
+.slide-button::after, 
+.slide-button2::after, 
+.slide-button3::after {
+background-color: transparent;
+content: '';
+display: block;
+height: 90%;
+width: 100%;
+border-left: 20px solid transparent;
+border-bottom: 50px solid rgb(255, 255, 255);
+position: absolute;
+right:0;
+bottom: 0;
+transform: translate(110%, 1%) rotate(0deg);
+transform-origin: top left;
+transition: .2s;
+transform: ease-out;
+z-index: -1;
+}
+
+
+.slide-button:hover::after, 
+.slide-button2:hover::after, 
+.slide-button3:hover::after{
+transform: translate(0, 0);
+}
+
+.slide-button:hover, 
+.slide-button2:hover, 
+.slide-button3:hover {
+border: 2px solid transparent;
+color: rgb(0, 0, 0);
+transform: scale(1.05);
+}
+
+/*----------------------------------------------------------*/
+.text2 {
+    top: 30%;
+    left: 110%;
+    width: 100%;
+}
+/*----------------------------------------------------------*/
+.text3 {
+    width: 100%;
+    top: 25%;
+    left: 210%;
+}
+
+/*----------------------------------------------------------*/
+
+
+/*----------------------------------------------------------*/
+
+  /* Buttons */
+
+
+.left-button {
+    left: 0;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.right-button {
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10;
+    top: 52.8%;
+    right: 0;
+    transform: scaleX(-1);
+}
+
+  /* Hide buttons initially */
+.left-button.hidden, .right-button.hidden {
+    display: none;
+}
