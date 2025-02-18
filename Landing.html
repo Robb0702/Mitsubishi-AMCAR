@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,9 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="Landing.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="navbar">
@@ -85,25 +88,86 @@
 
         <!-- New Image Section (red background instead of an image) -->
         <div class="new-image-section">
-            <!-- Image Grid Layout -->
-            <div class="image-grid">
-                <!-- First Row of Images (Landscape) -->
-                <div class="first-row">
-                    <img src="./Assets/Cars/Mirage.jpg" alt="Mirage">
-                    <img src="./Assets/Cars/Mirage G4.jpg" alt="Mirage G4">
-                    <img src="./Assets/Cars/Montero sports.jpg" alt="Montero Sports">
-                    <img src="./Assets/Cars/L300.jpg" alt="L300">
-                </div>
-    
-                <!-- Second Row of Images (Landscape) -->
-                <div class="second-row">
-                    <img src="./Assets/Cars/Xforce.jpg" alt="Xforce">
-                    <img src="./Assets/Cars/Xpander cross.jpeg" alt="Xpander Cross">
-                    <img src="./Assets/Cars/Xpander.jpg" alt="Xpander">
-                    <img src="./Assets/Cars/Triton.jpg" alt="Triton">
-                </div>
+            <div class="text-content oswald-font">
+                <h1 class="oswald-bold">Mitsubishi's Latest Lineup: Built for Performance, Designed for You</h1>
             </div>
-        </div>
+            <div class="image-grid">
+                <!-- First Row of Images -->
+                <div class="image-container">
+                    <div class="image-box">
+                        <img src="./Assets/Cars/Mirage.jpg" alt="Mirage" class="image-item">
+                        <div class="image-label">
+                            <span class="car-name">Mirage</span>
+                            <span class="car-price">₱711,000</span>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./Assets/Cars/Mirage G4.jpg" alt="Mirage G4" class="image-item">
+                        <div class="image-label">
+                            <span class="car-name">Mirage G4</span>
+                            <span class="car-price">₱769,000</span>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./Assets/Cars/Montero sports.jpg" alt="Montero Sports" class="image-item">
+                        <div class="image-label">
+                            <span class="car-name">Montero Sports</span>
+                            <span class="car-price">₱1,568,000</span>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./Assets/Cars/L300.jpg" alt="L300" class="image-item">
+                        <div class="image-label">
+                            <span class="car-name">L300</span>
+                            <span class="car-price">₱825,000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Row of Images -->
+                <div class="image-container">
+                    <div class="image-box">
+                        <img src="./Assets/Cars/Xforce.jpg" alt="Xforce" class="image-item">
+                        <div class="image-label">
+                            <span class="car-name">Xforce</span>
+                            <span class="car-price">₱25,000</span>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./Assets/Cars/Xpander cross.jpeg" alt="Xpander Cross" class="image-item">
+                        <div class="image-label">
+                            <span class="car-name">Xpander Cross</span>
+                            <span class="car-price">₱1,346,000</span>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./Assets/Cars/Xpander.jpg" alt="Xpander" class="image-item">
+                        <div class="image-label">
+                            <span class="car-name">Xpander</span>
+                            <span class="car-price">₱1,367,000</span>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./Assets/Cars/Triton.jpg" alt="Triton" class="image-item">
+                        <div class="image-label">
+                            <span class="car-name">Triton</span>
+                            <span class="car-price">₱1,134,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-navbar">
+                    <div class="social-links">
+                        <img src="C:\Users\AMCAR\Desktop\Mitsubishi-20250214T051301Z-001\Mitsubishi\Assets\Cars\facebook.png" alt="Facebook Icon" class="facebook-icon">
+    <a href="https://facebook.com/AMCARAutomotiveCorp" target="_blank" class="social-link">AMCAR Automotive Corp</a>
+
+    <img src="C:\Users\AMCAR\Desktop\Mitsubishi-20250214T051301Z-001\Mitsubishi\Assets\Cars\email.png" alt="Facebook Icon" class="facebook-icon">
+    <span class="email-text">someone@example.com</span>
+
+    <img src="C:\Users\AMCAR\Desktop\Mitsubishi-20250214T051301Z-001\Mitsubishi\Assets\Cars\contact.png" alt="Facebook Icon" class="facebook-icon">
+    <span class="contact-text">+1234567890</span>
+                    </div>
+                </div>
+                
     </section>
 </body>
 
