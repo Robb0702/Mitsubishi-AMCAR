@@ -35,6 +35,46 @@
 .menu ul:hover {
     color: #CF4647;
 }
+/* Style for the dropdown */
+/* Style for the dropdown (Vehicles and Shopping Tools) */
+.menu ul.dropdown {
+    position: relative;
+    list-style: none;
+}
+
+/* Dropdown content */
+.dropdown-content {
+        display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px; /* Ensures same width for both dropdowns */
+    top: 50px;
+    z-index: 1;
+}
+
+/* Show dropdown when hovering over the parent */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Style for each item in the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, Verdana, sans-serif; /* Same font for consistency */
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Optional: Same width for the dropdown menu (both VEHICLES and SHOPPING TOOLS) */
+.menu ul.dropdown .dropdown-content {
+    width: 180px; /* Consistent width across both dropdowns */
+}
 
 .icon {
     margin-left: .1875rem;

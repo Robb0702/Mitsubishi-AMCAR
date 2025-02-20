@@ -3,6 +3,13 @@ const slides = document.querySelectorAll('.slider-image');
 const totalSlides = slides.length;
 const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
+const dropdownMenus = document.querySelectorAll('.dropdown');
+const form = document.querySelector('.form'); // Assuming you have a form with class 'form'
+
+// Function to toggle the form visibility
+function toggleForm() {
+    form.style.display = form.style.display === 'block' ? 'none' : 'block';
+}
 
 function nextSlide() {
     currentIndex = (currentIndex + 1) % totalSlides;
@@ -13,30 +20,57 @@ function prevSlide() {
     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     updateSlider();
 }
-// Function to scroll the image row to the left by 3 images
-// Function to scroll the image row to the left by 3 images
-
 
 function updateSlider() {
-  const offset = -currentIndex * 100.4;
+    const offset = -currentIndex * 100.4;
     document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
 
-  // Hide left button if on the first image
     if (currentIndex === 0) {
-    leftButton.classList.add('hidden');
-} else {
-    leftButton.classList.remove('hidden');
-}
+        leftButton.classList.add('hidden');
+    } else {
+        leftButton.classList.remove('hidden');
+    }
 
-  // Hide right button if on the last image
-if (currentIndex === totalSlides - 1) {
-    rightButton.classList.add('hidden');
-} else {
-    rightButton.classList.remove('hidden');
+    if (currentIndex === totalSlides - 1) {
+        rightButton.classList.add('hidden');
+    } else {
+        rightButton.classList.remove('hidden');
     }
 }
 
-setInterval(nextSlide, 3000000); // Automatically change slides every 3 seconds
+setInterval(nextSlide, 3000);
 
-// Initial update for buttons visibility
 updateSlider();
+
+dropdownMenus.forEach(function (dropdownMenu) {
+    const dropdownContent = dropdownMenu.querySelector('.dropdown-content');
+    const icon = dropdownMenu.querySelector('.icon');
+
+    dropdownMenu.addEventListener('click', function (e) {
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+
+        if (dropdownContent.style.display === 'block') {
+            icon.setAttribute('name', 'chevron-up-outline');
+        } else {
+            icon.setAttribute('name', 'chevron-down-outline');
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!dropdownMenu.contains(e.target)) {
+            dropdownContent.style.display = 'none';
+            icon.setAttribute('name', 'chevron-down-outline');
+        }
+    });
+});
+
+// Select all images in the image grid
+const allImages = document.querySelectorAll('.image-item');
+
+// Loop through all images and add event listener to toggle the form
+allImages.forEach(function (image) {
+    image.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default image click behavior (e.g., navigation)
+        toggleForm(); // Toggle the form visibility
+    });
+});
