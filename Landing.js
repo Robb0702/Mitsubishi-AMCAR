@@ -4,7 +4,7 @@ const totalSlides = slides.length;
 const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
 const dropdownMenus = document.querySelectorAll('.dropdown');
-const form = document.querySelector('.form'); // Assuming you have a form with class 'form'
+const form = document.querySelector('#mirage-form'); // Target the form with id 'mirage-form'
 
 // Function to toggle the form visibility
 function toggleForm() {
@@ -64,7 +64,18 @@ dropdownMenus.forEach(function (dropdownMenu) {
     });
 });
 
-// Select all images in the image grid
+// Event listener for the "Mirage" link
+document.getElementById('mirage-link').addEventListener('click', function(event) {
+    event.preventDefault();  // Prevent default link behavior
+
+    // Show the Mirage form container when clicking the "Mirage" link
+    const mirageFormContainer = document.querySelector(".mirage-form-container");
+    mirageFormContainer.classList.toggle("hidden");
+});
+
+
+
+// Select all images in the image grid (optional, if you want other images to toggle form)
 const allImages = document.querySelectorAll('.image-item');
 
 // Loop through all images and add event listener to toggle the form

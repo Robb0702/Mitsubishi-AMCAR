@@ -21,6 +21,15 @@
     padding: 15px;
 }
 
+.mirage-form-container {
+    padding-bottom: 80px; /* Ensure it doesn't overlap with the bottom navbar */
+}
+
+/* Hide the Mirage form when not active */
+.mirage-form-container.hidden {
+    display: none;
+}
+
 .menu {
     display: flex;
     color: 232931;
@@ -424,6 +433,7 @@
     bottom: 0;
     width: 100%;
     font-size: 14px;
+    
 }
 .social-links {
     display: flex;
