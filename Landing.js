@@ -85,3 +85,6 @@ allImages.forEach(function (image) {
         toggleForm(); // Toggle the form visibility
     });
 });
+document.querySelector('.image-box').addEventListener('click', function() {
+    window.location.href = 'https://www.example.com';  // Navigate to another page
+});
